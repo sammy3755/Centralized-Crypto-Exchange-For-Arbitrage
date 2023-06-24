@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Site</title>
+    <style>
+        #dash-container {
+            width: 100%;
+            height: 0;
+            padding-bottom: 75%;
+            position: relative;
+        }
+
+        #dash-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sample Site</h1>
+    <div id="dash-container"></div>
+
+    <script>
+        var container = document.getElementById('dash-container');
+        var iframe = document.createElement('iframe');
+        iframe.src = 'http://127.0.0.1:5502';  // Replace with the URL where your Dash app is running
+        iframe.frameBorder = 0;
+        container.appendChild(iframe);
+    </script>
+</body>
+</html>
